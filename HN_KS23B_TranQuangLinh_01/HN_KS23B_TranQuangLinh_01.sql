@@ -64,36 +64,36 @@ INSERT INTO Flight(flight_id,airline_name,departure_airport,arrival_airport,depa
 INSERT INTO Booking(passenger_id,flight_id,booking_date,booking_status,ticket_quantity) VALUES
 	('P0001','F001','2025-02-20','Confirmed',1),
 	('P0002','F002','2025-02-21','Cancelled',2),
-    ('P0003','F003','2025-02-22','Pending',1),
-    ('P0004','F004','2025-02-23','Confirmed',3),
-    ('P0005','F001','2025-02-24','Pending',1),
-    ('P0006','F002','2025-02-25','Confirmed',2),
-    ('P0007','F003','2025-02-26','Cancelled',1),
-    ('P0008','F004','2025-02-27','Pending',4),
-    ('P0009','F001','2025-02-28','Confirmed',1),
-    ('P0010','F002','2025-02-28','Pending',1),
-    ('P0001','F003','2025-03-01','Confirmed',3),
-    ('P0002','F004','2025-03-02','Cancelled',1),
-    ('P0003','F001','2025-03-03','Pending',2),
-    ('P0004','F002','2025-03-04','Confirmed',1),
-    ('P0005','F003','2025-03-05','Cancelled',2),
-    ('P0006','F004','2025-03-06','Pending',1),
-    ('P0007','F001','2025-03-07','Confirmed',3),
-    ('P0008','F002','2025-02-08','Cancelled',2),
-    ('P0009','F003','2025-02-09','Pending',1),
-    ('P0010','F004','2025-02-10	','Confirmed',1);
+	('P0003','F003','2025-02-22','Pending',1),
+	('P0004','F004','2025-02-23','Confirmed',3),
+	('P0005','F001','2025-02-24','Pending',1),
+	('P0006','F002','2025-02-25','Confirmed',2),
+	('P0007','F003','2025-02-26','Cancelled',1),
+	('P0008','F004','2025-02-27','Pending',4),
+	('P0009','F001','2025-02-28','Confirmed',1),
+	('P0010','F002','2025-02-28','Pending',1),
+	('P0001','F003','2025-03-01','Confirmed',3),
+	('P0002','F004','2025-03-02','Cancelled',1),
+	('P0003','F001','2025-03-03','Pending',2),
+	('P0004','F002','2025-03-04','Confirmed',1),
+	('P0005','F003','2025-03-05','Cancelled',2),
+	('P0006','F004','2025-03-06','Pending',1),
+	('P0007','F001','2025-03-07','Confirmed',3),
+	('P0008','F002','2025-02-08','Cancelled',2),
+	('P0009','F003','2025-02-09','Pending',1),
+	('P0010','F004','2025-02-10	','Confirmed',1);
 
 INSERT INTO Payment(payment_id,booking_id,payment_method,payment_amount,payment_date,payment_status) VALUES
 	(1,1,'Credit Card','150.5','2025-02-20','Success'),
-    (2,2,'Bank Transfer','200.0','2025-02-21','Failed'),
-    (3,3,'Cash','120.8','2025-02-22','Pending'),
-    (4,4,'Credit Card','180.0','2025-02-23','Success'),
-    (5,5,'Bank Transfer','150.5','2025-02-24','Pending'),
-    (6,6,'Cash','200.0','2025-02-25','Success'),
-    (7,7,'Credit Card','120.8','2025-02-26','Failed'),
-    (8,8,'Bank Transfer','180.0','2025-02-27','Pending'),
-    (9,9,'Cash','150.5','2025-02-28','Success'),
-    (10,10,'Credit Card','200.0','2025-03-01','Pending');
+	(2,2,'Bank Transfer','200.0','2025-02-21','Failed'),
+	(3,3,'Cash','120.8','2025-02-22','Pending'),
+	(4,4,'Credit Card','180.0','2025-02-23','Success'),
+	(5,5,'Bank Transfer','150.5','2025-02-24','Pending'),
+	(6,6,'Cash','200.0','2025-02-25','Success'),
+	(7,7,'Credit Card','120.8','2025-02-26','Failed'),
+	(8,8,'Bank Transfer','180.0','2025-02-27','Pending'),
+	(9,9,'Cash','150.5','2025-02-28','Success'),
+	(10,10,'Credit Card','200.0','2025-03-01','Pending');
 
 -- PHẦN 3: CẬP NHẬT DỮ LIỆU
 
@@ -197,14 +197,6 @@ JOIN Booking b ON p.passenger_id = b.passenger_id
 JOIN Payment pay ON b.booking_id = pay.booking_id
 WHERE p.passenger_bod < '2000-01-01'
 ORDER BY p.passenger_full_name;
-
-
-
-
-
-
-
-
 
 -- PHẦN 4: TẠO VIEW
 
